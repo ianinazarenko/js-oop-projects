@@ -1,0 +1,178 @@
+/* 
+============
+Font
+============
+*/
+@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@400;600&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap");
+
+/* 
+============
+Variables
+============
+*/
+:root {
+    --clr-dark: #222222;
+    --clr-cold-light-grey: #ccd4dc;
+    --clr-cold-grey: #7c839c;
+    --clr-accent: #49a6e9;
+    --clr-white: #fff;
+    --clr-gold: #bd9b3b;
+    --font: "Commissioner", sans-serif;
+    --font-cursive: "Henny Penny", cursive;
+    --transition: all 0.3s ease-out;
+    --radius: 0.5rem;
+    --spacing: 0.2rem;
+    --shadow: 0 0 0.8rem rgba(0, 0, 0, 0.1);
+}
+
+/* 
+============
+Global
+============
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font);
+    background-color: #f1f5f8;
+    line-height: 1.5;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--clr-dark);
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--clr-accent);
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h4 {
+    color: var(--clr-accent);
+}
+
+p {
+    font-size: 0.875rem;
+}
+
+.btn {
+    display: inline-block;
+    margin: 2rem;
+    padding: 0.75rem 1rem;
+    background-color: var(--clr-dark);
+    color: var(--clr-white);
+    border: 3px solid var(--clr-dark);
+    border-radius: var(--radius);
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: var(--transition);
+    letter-spacing: var(--spacing);
+}
+
+.btn:hover {
+    background-color: transparent;
+    color: var(--clr-dark);
+}
+
+.underline {
+    width: 6rem;
+    height: 0.5rem;
+    background-color: var(--clr-accent);
+    margin: 0.5rem auto;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+video {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+@media screen and (min-width: 800px) {
+    h1 {
+        font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 3.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+}
+
+.--section {
+    padding: 5rem 0;
+}
+
+.--section-centered {
+    width: 90vw;
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+/* 
+============
+Main
+============
+*/
+
+.container {
+    background: var(--clr-white);
+    padding: 3rem 2rem;
+    text-align: center;
+    margin-bottom: 4rem;
+    max-width: 50rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-transform: capitalize;
+}
+
+.value {
+    font-size: 5rem;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.btn-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 2.25rem;
+}
+
+.btn {
+    margin-top: 0;
+}
