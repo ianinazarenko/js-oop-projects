@@ -173,7 +173,12 @@ Modal
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+}
+
+.open {
+    display: block;
 }
 
 button {
@@ -185,42 +190,75 @@ button {
 
 .close-btn {
     position: absolute;
-    top: 1rem;
-    right: 2rem;
-}
-
-.prev-btn {
-    position: absolute;
-    left: 1rem;
-    top: 50%;
-    transform: translateY(-50%);
-    height: 70vh;
+    top: 0;
+    right: 0;
     cursor: pointer;
-    width: 10rem;
-    text-align: left;
+    width: 8rem;
+    height: 8rem;
 }
 
-.next-btn {
-    position: absolute;
-    right: 1rem;
-    top: 50%;
-    transform: translateY(-50%);
-    height: 70vh;
-    cursor: pointer;
-    width: 10rem;
-    text-align: right;
-}
-
-@media screen and (min-width: 768px) {
-    .prev-btn,
-    .next-btn {
-        text-align: center;
-    }
-}
-
-.modal-content {
+.modal__content {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 70vw;
+    max-width: 1170px;
+}
+
+.modal__main-content {
+    position: relative;
+}
+
+.prev-btn,
+.next-btn {
+    position: absolute;
+    width: 15vw;
+    height: 100%;
+    cursor: pointer;
+}
+
+.prev-btn {
+    left: -15vw;
+}
+
+.next-btn {
+    right: -15vw;
+}
+
+.modal__img-title {
+    margin: 1.5rem;
+    text-align: center;
+    color: var(--clr-white);
+    font-size: 1.5rem;
+    text-transform: capitalize;
+}
+
+@media screen and (max-width: 768px) {
+    .modal__img-title {
+        font-size: 2.2rem;
+    }
+}
+
+.modal__img-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    overflow: hidden;
+    max-height: 10rem;
+}
+
+.modal__img {
+    width: 8rem;
+    filter: brightness(0.5);
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.modal__img:hover {
+    filter: brightness(1);
+}
+
+.selected {
+    filter: brightness(1);
 }
